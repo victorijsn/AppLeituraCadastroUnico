@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+build/
+dist/
+dist_installer/
+*.spec
+tests/e2e_*
+tests/test_out.*
+
+# Bases de dados do CadÚnico (sigilo LGPD e limite de 100MB do GitHub)
+base/*.zip
+base/*.csv
+*.csv
+*.xlsx
+!base/dicionariocecad_marc_pbf.xlsx

@@ -1,0 +1,1432 @@
+{
+  "fields": {
+    "cd_ibge": {
+      "descricao": "codigo do ibge do municipio",
+      "mapeamento": {}
+    },
+    "d.cod_familiar_fam": {
+      "descricao": "Codigo familiar",
+      "mapeamento": {}
+    },
+    "d.dat_cadastramento_fam": {
+      "descricao": "Data de cadastramento da familia",
+      "mapeamento": {}
+    },
+    "d.dat_atual_fam": {
+      "descricao": "Data da ultima atualizacao da familia",
+      "mapeamento": {}
+    },
+    "d.cod_est_cadastral_fam": {
+      "descricao": "Estado cadastral da familia",
+      "mapeamento": {
+        "2": "Sem Registro Civil",
+        "3": "Cadastrado"
+      }
+    },
+    "d.cod_forma_coleta_fam": {
+      "descricao": "Forma de coleta",
+      "mapeamento": {
+        "0": "Informacao migrada como inexistente",
+        "1": "Sem visita Domiciliar",
+        "2": "Com visita domiciliar"
+      }
+    },
+    "d.dta_entrevista_fam": {
+      "descricao": "Data da entrevista",
+      "mapeamento": {}
+    },
+    "d.nom_localidade_fam": {
+      "descricao": "Nome da localidade",
+      "mapeamento": {}
+    },
+    "d.nom_tip_logradouro_fam": {
+      "descricao": "Tipo de logradouro",
+      "mapeamento": {}
+    },
+    "d.nom_titulo_logradouro_fam": {
+      "descricao": "Titulo do logradouro",
+      "mapeamento": {}
+    },
+    "d.nom_logradouro_fam": {
+      "descricao": "Nome do logradouro",
+      "mapeamento": {}
+    },
+    "d.num_logradouro_fam": {
+      "descricao": "Numero do logradouro",
+      "mapeamento": {}
+    },
+    "d.des_complemento_fam": {
+      "descricao": "Complemento do numero",
+      "mapeamento": {}
+    },
+    "d.des_complemento_adic_fam": {
+      "descricao": "Complemento adicional",
+      "mapeamento": {}
+    },
+    "d.num_cep_logradouro_fam": {
+      "descricao": "CEP",
+      "mapeamento": {}
+    },
+    "d.cod_unidade_territorial_fam": {
+      "descricao": "Codigo da unidade territorial local",
+      "mapeamento": {}
+    },
+    "d.nom_unidade_territorial_fam": {
+      "descricao": "Nome da unidade territorial local",
+      "mapeamento": {}
+    },
+    "d.txt_referencia_local_fam": {
+      "descricao": "Referencia para localizacao do endereco",
+      "mapeamento": {}
+    },
+    "d.nom_entrevistador_fam": {
+      "descricao": "Nome do entrevistador",
+      "mapeamento": {}
+    },
+    "d.num_cpf_entrevistador_fam": {
+      "descricao": "CPF do entrevistador",
+      "mapeamento": {}
+    },
+    "d.vlr_renda_media_fam": {
+      "descricao": "Valor da renda familiar per capita",
+      "mapeamento": {}
+    },
+    "d.fx_rfpc": {
+      "descricao": "Faixa da renda familiar per capita",
+      "mapeamento": {
+        "1": "Ate R$89,00",
+        "2": "Entre R$85,01 ate R$178,00",
+        "3": "Entre R$178,01 ate 1/2 S.M",
+        "4": "Acima de 1/2 S.M"
+      }
+    },
+    "d.vlr_renda_total_fam": {
+      "descricao": "Valor da renda total da familia",
+      "mapeamento": {}
+    },
+    "d.marc_pbf": {
+      "descricao": "Familia beneficiaria do Programa Bolsa Familia",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "d.qtde_meses_desat_cat": {
+      "descricao": "Numero de meses apos a ultima atualizacao cadastral",
+      "mapeamento": {
+        "0": "ate 12 Meses",
+        "1": "13 a 18 Meses",
+        "2": "19 a 24 Meses",
+        "3": "25 a 36 Meses",
+        "4": "37 a 48 Meses",
+        "5": "acima de 48 Meses"
+      }
+    },
+    "d.cod_local_domic_fam": {
+      "descricao": "Situacao do domicilio",
+      "mapeamento": {
+        "1": "Urbanas",
+        "2": "Rurais"
+      }
+    },
+    "d.cod_especie_domic_fam": {
+      "descricao": "Especie do domicilio",
+      "mapeamento": {
+        "1": "Particular Permanente",
+        "2": "Particular improvisado",
+        "3": "Coletivo"
+      }
+    },
+    "d.qtd_comodos_domic_fam": {
+      "descricao": "Quantidade de comodos do domicilio",
+      "mapeamento": {}
+    },
+    "d.qtd_comodos_dormitorio_fam": {
+      "descricao": "Comodo servindo como dormitorio do domicilio",
+      "mapeamento": {}
+    },
+    "d.cod_material_piso_fam": {
+      "descricao": "Material predominante no piso do domicilio",
+      "mapeamento": {
+        "1": "Terra",
+        "2": "Cimento",
+        "3": "Madeira aproveitada",
+        "4": "Madeira aparelhada",
+        "5": "Ceramica, lajota ou pedra",
+        "6": "Carpete",
+        "7": "Outro Material"
+      }
+    },
+    "d.cod_material_domic_fam": {
+      "descricao": "Material predominante nas paredes externas do domicilio",
+      "mapeamento": {
+        "1": "Alvenaria/tijolo com revestimento",
+        "2": "Alvenaria/tijolo sem revestimento",
+        "3": "Madeira aparelhada",
+        "4": "Taipa revestida",
+        "5": "Taipa nao revestida",
+        "6": "Madeira aproveitada",
+        "7": "Palha",
+        "8": "Outro Material"
+      }
+    },
+    "d.cod_agua_canalizada_fam": {
+      "descricao": "Agua canalizada no domicilio",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "d.cod_abaste_agua_domic_fam": {
+      "descricao": "Forma de abastecimento de agua",
+      "mapeamento": {
+        "1": "Rede geral de distribuicao",
+        "2": "Poco ou nascente",
+        "3": "Cisterna",
+        "4": "Outra forma"
+      }
+    },
+    "d.cod_banheiro_domic_fam": {
+      "descricao": "Existencia de banheiro",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "d.cod_escoa_sanitario_domic_fam": {
+      "descricao": "Forma de escoamento sanitario",
+      "mapeamento": {
+        "1": "Rede coletora de esgoto ou pluvial",
+        "2": "Fossa septica",
+        "3": "Fossa rudimentar",
+        "4": "Vala a ceu aberto",
+        "5": "Direto para um rio, lago ou mar",
+        "6": "Outra forma"
+      }
+    },
+    "d.cod_destino_lixo_domic_fam": {
+      "descricao": "Forma de coleta do lixo",
+      "mapeamento": {
+        "1": "E coletado diretamente",
+        "2": "E coletado indiretamente",
+        "3": "E queimado ou enterrado na propriedade",
+        "4": "E jogado em terreno baldio ou logradouro (rua, avenida, etc.)",
+        "5": "E jogado em rio ou mar",
+        "6": "Tem outro destino"
+      }
+    },
+    "d.cod_iluminacao_domic_fam": {
+      "descricao": "Tipo de iluminacao",
+      "mapeamento": {
+        "1": "Eletrica com medidor proprio",
+        "2": "Eletrica com medidor comunitario",
+        "3": "Eletrica sem medidor",
+        "4": "Oleo, querosene ou gas",
+        "5": "Vela",
+        "6": "Outra forma"
+      }
+    },
+    "d.cod_calcamento_domic_fam": {
+      "descricao": "Calcamento em frente ao seu domicilio",
+      "mapeamento": {
+        "1": "Total",
+        "2": "Parcial",
+        "3": "Nao existe"
+      }
+    },
+    "d.cod_familia_indigena_fam": {
+      "descricao": "Familia Indigena",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "d.cod_povo_indigena_fam": {
+      "descricao": "Codigo de povo indigena",
+      "mapeamento": {}
+    },
+    "d.nom_povo_indigena_fam": {
+      "descricao": "Nome do povo indigena",
+      "mapeamento": {}
+    },
+    "d.cod_indigena_reside_fam": {
+      "descricao": "Reside em reserva indigena",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "d.cod_reserva_indigena_fam": {
+      "descricao": "Codigo da reserva indigena",
+      "mapeamento": {}
+    },
+    "d.nom_reserva_indigena_fam": {
+      "descricao": "Nome da reserva indigena",
+      "mapeamento": {}
+    },
+    "d.ind_familia_quilombola_fam": {
+      "descricao": "Familia quilombola",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "d.cod_comunidade_quilombola_fam": {
+      "descricao": "Codigo da comunidade quilombola",
+      "mapeamento": {}
+    },
+    "d.nom_comunidade_quilombola_fam": {
+      "descricao": "Nome da comunidade quilombola",
+      "mapeamento": {}
+    },
+    "d.qtd_pessoas_domic_fam": {
+      "descricao": "Quantidade de pessoas no domicilio",
+      "mapeamento": {}
+    },
+    "d.qtd_familias_domic_fam": {
+      "descricao": "Quantidade de familias no domicilio",
+      "mapeamento": {}
+    },
+    "d.qtd_pessoa_inter_0_17_anos_fam": {
+      "descricao": "Quantidade de pessoas internadas faixa 0-17 anos",
+      "mapeamento": {}
+    },
+    "d.qtd_pessoa_inter_18_64_anos_fam": {
+      "descricao": "Quantidade de pessoas internadas faixa 18-59 anos",
+      "mapeamento": {}
+    },
+    "d.qtd_pessoa_inter_65_anos_fam": {
+      "descricao": "Quantidade de pessoas internadas faixa 60 anos ou mais",
+      "mapeamento": {}
+    },
+    "d.val_desp_energia_fam": {
+      "descricao": "Valor de despesas com energia",
+      "mapeamento": {}
+    },
+    "d.val_desp_agua_esgoto_fam": {
+      "descricao": "Valor de despesas com agua",
+      "mapeamento": {}
+    },
+    "d.val_desp_gas_fam": {
+      "descricao": "Valor de despesas com gas",
+      "mapeamento": {}
+    },
+    "d.val_desp_alimentacao_fam": {
+      "descricao": "Valor de despesas com alimentacao",
+      "mapeamento": {}
+    },
+    "d.val_desp_transpor_fam": {
+      "descricao": "Valor de despesas com transporte",
+      "mapeamento": {}
+    },
+    "d.val_desp_aluguel_fam": {
+      "descricao": "Valor de despesas com aluguel",
+      "mapeamento": {}
+    },
+    "d.val_desp_medicamentos_fam": {
+      "descricao": "Valor de despesas com medicamentos",
+      "mapeamento": {}
+    },
+    "d.nom_estab_assist_saude_fam": {
+      "descricao": "Nome do estabelecimento EAS/MS",
+      "mapeamento": {}
+    },
+    "d.cod_eas_fam": {
+      "descricao": "Codigo do estabelecimento EAS/MS",
+      "mapeamento": {}
+    },
+    "d.nom_centro_assist_fam": {
+      "descricao": "Nome do CRAS/CREAS",
+      "mapeamento": {}
+    },
+    "d.cod_centro_assist_fam": {
+      "descricao": "Codigo do CRAS/CREAS",
+      "mapeamento": {}
+    },
+    "d.num_ddd_contato_1_fam": {
+      "descricao": "DDD do telefone primario",
+      "mapeamento": {}
+    },
+    "d.num_tel_contato_1_fam": {
+      "descricao": "Numero do telefone primario",
+      "mapeamento": {}
+    },
+    "d.ic_tipo_contato_1_fam": {
+      "descricao": "Tipo do telefone primario",
+      "mapeamento": {
+        "L": "Celular",
+        "C": "Trabalho",
+        "R": "Residencial",
+        "O": "Recado",
+        "N": "Nao tem",
+        "D": "Nao declarado",
+        "S": "Sem coleta de dados"
+      }
+    },
+    "d.ic_envo_sms_contato_1_fam": {
+      "descricao": "Autoriza envio de mensagem para telefone primario",
+      "mapeamento": {
+        "S": "Sim",
+        "N": "Nao"
+      }
+    },
+    "d.num_tel_contato_2_fam": {
+      "descricao": "Numero do telefone secundario",
+      "mapeamento": {}
+    },
+    "d.num_ddd_contato_2_fam": {
+      "descricao": "DDD do telefone secundario",
+      "mapeamento": {}
+    },
+    "d.ic_tipo_contato_2_fam": {
+      "descricao": "Tipo do telefone secundario",
+      "mapeamento": {
+        "L": "Celular",
+        "C": "Trabalho",
+        "R": "Residencial",
+        "O": "Recado",
+        "N": "Nao tem",
+        "D": "Nao declarado",
+        "S": "Sem coleta de dados"
+      }
+    },
+    "d.ic_envo_sms_contato_2_fam": {
+      "descricao": "Autoriza envio de mensagem para telefone secundario",
+      "mapeamento": {
+        "S": "Sim",
+        "N": "Nao"
+      }
+    },
+    "d.cod_cta_energ_unid_consum_fam": {
+      "descricao": "Codigo da unidade consumidora associado a conta de energia eletrica do domicilio.",
+      "mapeamento": {}
+    },
+    "d.ind_parc_mds_fam": {
+      "descricao": "Grupos Populacionais Tradicionais e Especificos",
+      "mapeamento": {
+        "101": "Famlia Cigana",
+        "201": "Familia Extrativista",
+        "202": "Familia de Pescadores  Artesanais",
+        "203": "Familia Pertencente a Comunidade de Terreiro",
+        "204": "Familia Ribeirinha",
+        "205": "Familia Agricultores Familiares",
+        "301": "Familia Assentada da Reforma Agraria",
+        "302": "Familia Beneficiaria do Programa Nacional do Credito Fundiario",
+        "303": "Familia Acampada",
+        "304": "Familia Atingida por Empreendimentos de Infraestrutura",
+        "305": "Familia de Preso do Sistema Carcerario",
+        "306": "Familia Catadores de Material Reciclavel",
+        "0": "Nenhuma"
+      }
+    },
+    "d.ref_cad": {
+      "descricao": "Referencia Cadastro Unico",
+      "mapeamento": {}
+    },
+    "d.ref_pbf": {
+      "descricao": "Data de referencia Programa Bolsa Familia",
+      "mapeamento": {}
+    },
+    "p.cod_familiar_fam_origem": {
+      "descricao": "Codigo da familia de origem antes da transfencia",
+      "mapeamento": {}
+    },
+    "p.cod_est_cadastral_memb": {
+      "descricao": "Estado cadastral da pessoa",
+      "mapeamento": {
+        "2": "Sem Registro Civil",
+        "3": "Cadastrado",
+        "5": "Aguardando NIS",
+        "6": "Validando NIS"
+      }
+    },
+    "p.ind_trabalho_infantil_pessoa": {
+      "descricao": "Pessoa com marcacao de trabalho infantil",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "p.nom_pessoa": {
+      "descricao": "Nome",
+      "mapeamento": {}
+    },
+    "p.num_nis_pessoa_atual": {
+      "descricao": "NIS",
+      "mapeamento": {}
+    },
+    "p.nom_apelido_pessoa": {
+      "descricao": "Nome Social/Apelido",
+      "mapeamento": {}
+    },
+    "p.cod_sexo_pessoa": {
+      "descricao": "Sexo",
+      "mapeamento": {
+        "1": "Masculino",
+        "2": "Feminino"
+      }
+    },
+    "p.dta_nasc_pessoa": {
+      "descricao": "Data de nascimento",
+      "mapeamento": {}
+    },
+    "p.cod_parentesco_rf_pessoa": {
+      "descricao": "Relacao de parentesco com o responsavel familiar",
+      "mapeamento": {
+        "1": "Pessoa Responsavel pela Unidade Familiar - RF",
+        "2": "Conjuge ou companheiro(a)",
+        "3": "Filho(a)",
+        "4": "Enteado(a)",
+        "5": "Neto(a) ou bisneto(a)",
+        "6": "Pai ou mae",
+        "7": "Sogro(a)",
+        "8": "Irmao ou irma",
+        "9": "Genro ou nora",
+        "10": "Outro parente",
+        "11": "Nao parente"
+      }
+    },
+    "p.cod_raca_cor_pessoa": {
+      "descricao": "Cor ou raca",
+      "mapeamento": {
+        "1": "Branca",
+        "2": "Preta",
+        "3": "Amarela",
+        "4": "Parda",
+        "5": "Indigena"
+      }
+    },
+    "p.nom_completo_mae_pessoa": {
+      "descricao": "Nome da mae",
+      "mapeamento": {}
+    },
+    "p.nom_completo_pai_pessoa": {
+      "descricao": "Nome do pai",
+      "mapeamento": {}
+    },
+    "p.cod_local_nascimento_pessoa": {
+      "descricao": "Local de nascimento",
+      "mapeamento": {
+        "1": "Neste municipio",
+        "2": "Em outro municipio",
+        "3": "Em outro pais"
+      }
+    },
+    "p.sig_uf_munic_nasc_pessoa": {
+      "descricao": "UF de nascimento da pessoa",
+      "mapeamento": {}
+    },
+    "p.nom_ibge_munic_nasc_pessoa": {
+      "descricao": "Nome do municipio de nascimento da pessoa",
+      "mapeamento": {}
+    },
+    "p.cod_ibge_munic_nasc_pessoa": {
+      "descricao": "Codigo ibge do municipio de nascimento da pessoa",
+      "mapeamento": {}
+    },
+    "p.nom_pais_origem_pessoa": {
+      "descricao": "Nome do pais de nascimento da pessoa",
+      "mapeamento": {}
+    },
+    "p.cod_pais_origem_pessoa": {
+      "descricao": "Codigo do pais de nascimento da pessoa, no formato nn",
+      "mapeamento": {}
+    },
+    "p.cod_certidao_registrada_pessoa": {
+      "descricao": "Nascimento registrado em Cartorio",
+      "mapeamento": {
+        "1": "Sim e tem Certidao de Nascimento",
+        "2": "Sim, mas nao tem Certidao de Nascimento",
+        "3": "Nao",
+        "4": "Nao sabe"
+      }
+    },
+    "p.fx_idade": {
+      "descricao": "Faixa etaria",
+      "mapeamento": {
+        "0": "Entre 0 e 4",
+        "1": "Entre 5 a 6",
+        "2": "Entre 7 a 15",
+        "3": "Entre 16 a 17",
+        "4": "Entre 18 a 24",
+        "5": "Entre 25 a 34",
+        "6": "Entre 35 a 39",
+        "7": "Entre 40 a 44",
+        "8": "Entre 45 a 49",
+        "9": "Entre 50 a 54",
+        "10": "Entre 55 a 59",
+        "11": "Entre 60 a 64",
+        "12": "Maior que  65"
+      }
+    },
+    "p.marc_pbf": {
+      "descricao": "Pessoa beneficiaria do Programa Bolsa Familia",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.cod_certidao_civil_pessoa": {
+      "descricao": "Tipo de certidao",
+      "mapeamento": {
+        "1": "Nascimento",
+        "2": "Casamento",
+        "3": "RANI"
+      }
+    },
+    "p.cod_livro_termo_certid_pessoa": {
+      "descricao": "Numero do livro",
+      "mapeamento": {}
+    },
+    "p.cod_folha_termo_certid_pessoa": {
+      "descricao": "Numero da folha",
+      "mapeamento": {}
+    },
+    "p.cod_termo_matricula_certid_pessoa": {
+      "descricao": "Numero do termo",
+      "mapeamento": {}
+    },
+    "p.nom_munic_certid_pessoa": {
+      "descricao": "Municipio do registro",
+      "mapeamento": {}
+    },
+    "p.cod_ibge_munic_certid_pessoa": {
+      "descricao": "Codigo IBGE do municipio do registro",
+      "mapeamento": {}
+    },
+    "p.cod_cartorio_certid_pessoa": {
+      "descricao": "Codigo do cartorio do registro",
+      "mapeamento": {}
+    },
+    "p.num_cpf_pessoa": {
+      "descricao": "CPF da pessoa",
+      "mapeamento": {}
+    },
+    "p.num_identidade_pessoa": {
+      "descricao": "Numero do RG",
+      "mapeamento": {}
+    },
+    "p.cod_complemento_pessoa": {
+      "descricao": "Complemento do numero do RG",
+      "mapeamento": {}
+    },
+    "p.dta_emissao_ident_pessoa": {
+      "descricao": "Data de emissao do RG (formato DDMMAAAA)",
+      "mapeamento": {}
+    },
+    "p.sig_uf_ident_pessoa": {
+      "descricao": "Estado emissor do RG",
+      "mapeamento": {}
+    },
+    "p.sig_orgao_emissor_pessoa": {
+      "descricao": "Sigla do orgao emissor do RG",
+      "mapeamento": {}
+    },
+    "p.num_cart_trab_prev_soc_pessoa": {
+      "descricao": "Numero da CTPS",
+      "mapeamento": {}
+    },
+    "p.num_serie_trab_prev_soc_pessoa": {
+      "descricao": "Serie da CTPS",
+      "mapeamento": {}
+    },
+    "p.dta_emissao_cart_trab_pessoa": {
+      "descricao": "Data de emissao da CTPS (formato DDMMAAAA)",
+      "mapeamento": {}
+    },
+    "p.sig_uf_cart_trab_pessoa": {
+      "descricao": "Estado emissor da CTPS",
+      "mapeamento": {}
+    },
+    "p.num_titulo_eleitor_pessoa": {
+      "descricao": "Numero do Titulo de Eleitor",
+      "mapeamento": {}
+    },
+    "p.num_zona_tit_eleitor_pessoa": {
+      "descricao": "Zona do Titulo de Eleitor",
+      "mapeamento": {}
+    },
+    "p.num_secao_tit_eleitor_pessoa": {
+      "descricao": "Secao do Titulo de Eleitor",
+      "mapeamento": {}
+    },
+    "p.cod_deficiencia_memb": {
+      "descricao": "Pessoa tem deficiencia?",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "p.ind_def_cegueira_memb": {
+      "descricao": "Cegueira",
+      "mapeamento": {
+        "0": "Opcao nao marcada no formulario",
+        "1": "Opcao marcada no formulario"
+      }
+    },
+    "p.ind_def_baixa_visao_memb": {
+      "descricao": "Baixa visao",
+      "mapeamento": {
+        "0": "Opcao nao marcada no formulario",
+        "1": "Opcao marcada no formulario"
+      }
+    },
+    "p.ind_def_surdez_profunda_memb": {
+      "descricao": "Surdez severa/profunda",
+      "mapeamento": {
+        "0": "Opcao nao marcada no formulario",
+        "1": "Opcao marcada no formulario"
+      }
+    },
+    "p.ind_def_surdez_leve_memb": {
+      "descricao": "Surdez leve/moderada",
+      "mapeamento": {
+        "0": "Opcao nao marcada no formulario",
+        "1": "Opcao marcada no formulario"
+      }
+    },
+    "p.ind_def_fisica_memb": {
+      "descricao": "Deficiencia fisica",
+      "mapeamento": {
+        "0": "Opcao nao marcada no formulario",
+        "1": "Opcao marcada no formulario"
+      }
+    },
+    "p.ind_def_mental_memb": {
+      "descricao": "Deficiencia mental ou intelectual",
+      "mapeamento": {
+        "0": "Opcao nao marcada no formulario",
+        "1": "Opcao marcada no formulario"
+      }
+    },
+    "p.ind_def_sindrome_down_memb": {
+      "descricao": "Sindrome de Down",
+      "mapeamento": {
+        "0": "Opcao nao marcada no formulario",
+        "1": "Opcao marcada no formulario"
+      }
+    },
+    "p.ind_def_transtorno_mental_memb": {
+      "descricao": "Transtorno/doenca mental",
+      "mapeamento": {
+        "0": "Opcao nao marcada no formulario",
+        "1": "Opcao marcada no formulario"
+      }
+    },
+    "p.ind_ajuda_nao_memb": {
+      "descricao": "Nao recebe ajuda de terceiros",
+      "mapeamento": {
+        "0": "Opcao nao marcada no formulario",
+        "1": "Opcao marcada no formulario"
+      }
+    },
+    "p.ind_ajuda_familia_memb": {
+      "descricao": "Recebe ajuda de alguem da familia",
+      "mapeamento": {
+        "0": "Opcao nao marcada no formulario",
+        "1": "Opcao marcada no formulario"
+      }
+    },
+    "p.ind_ajuda_especializado_memb": {
+      "descricao": "Recebe ajuda de cuidador especializado",
+      "mapeamento": {
+        "0": "Opcao nao marcada no formulario",
+        "1": "Opcao marcada no formulario"
+      }
+    },
+    "p.ind_ajuda_vizinho_memb": {
+      "descricao": "Recebe ajuda de vizinho",
+      "mapeamento": {
+        "0": "Opcao nao marcada no formulario",
+        "1": "Opcao marcada no formulario"
+      }
+    },
+    "p.ind_ajuda_instituicao_memb": {
+      "descricao": "Recebe ajuda de instituicao",
+      "mapeamento": {
+        "0": "Opcao nao marcada no formulario",
+        "1": "Opcao marcada no formulario"
+      }
+    },
+    "p.ind_ajuda_outra_memb": {
+      "descricao": "Recebe ajuda de outra forma",
+      "mapeamento": {
+        "0": "Opcao nao marcada no formulario",
+        "1": "Opcao marcada no formulario"
+      }
+    },
+    "p.cod_sabe_ler_escrever_memb": {
+      "descricao": "Pessoa sabe ler e escrever",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "p.ind_frequenta_escola_memb": {
+      "descricao": "Pessoa frequenta escola",
+      "mapeamento": {
+        "1": "Sim, rede publica",
+        "2": "Sim, rede particular",
+        "3": "Nao, ja frequentou",
+        "4": "Nunca frequentou"
+      }
+    },
+    "p.nom_escola_memb": {
+      "descricao": "Nome da escola da pessoa",
+      "mapeamento": {}
+    },
+    "p.cod_escola_local_memb": {
+      "descricao": "Escola localizada no municipio",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "p.sig_uf_escola_memb": {
+      "descricao": "UF da escola da pessoa",
+      "mapeamento": {}
+    },
+    "p.nom_munic_escola_memb": {
+      "descricao": "Nome do municipio da escola da pessoa",
+      "mapeamento": {}
+    },
+    "p.cod_ibge_munic_escola_memb": {
+      "descricao": "Codigo do ibge do municipio da escola da pessoa",
+      "mapeamento": {}
+    },
+    "p.cod_censo_inep_memb": {
+      "descricao": "Codigo INEP da escola da pessoa",
+      "mapeamento": {}
+    },
+    "p.cod_curso_frequenta_memb": {
+      "descricao": "Curso que a pessoa frequenta",
+      "mapeamento": {
+        "1": "Creche",
+        "2": "Pre-escola (exceto CA)",
+        "3": "Classe de Alfabetizacao - CA",
+        "4": "Ensino Fundamental regular (duracao 8 anos)",
+        "5": "Ensino Fundamental regular (duracao 9 anos)",
+        "6": "Ensino Fundamental especial",
+        "7": "Ensino Medio regular",
+        "8": "Ensino Medio especial",
+        "9": "Ensino Fundamental EJA - series iniciais (Supletivo - 1Âª a 4Âª)",
+        "10": "Ensino Fundamental EJA - series finais (Supletivo - 5Âª a 8Âª)",
+        "11": "Ensino Medio EJA (Supletivo)",
+        "12": "Alfabetizacao para adultos(Mobral, etc.)",
+        "13": "Superior, Aperfeicoamento,Especializacao, Mestrado,Doutorado",
+        "14": "Pre-vestibular"
+      }
+    },
+    "p.cod_ano_serie_frequenta_memb": {
+      "descricao": "Ano e serie do curso que a pessoa frequenta",
+      "mapeamento": {
+        "1": "Primeiro(a)",
+        "2": "Segundo(a)",
+        "3": "Terceiro(a)",
+        "4": "Quarto(a)",
+        "5": "Quinto(a)",
+        "6": "Sexto(a)",
+        "7": "Setimo(a)",
+        "8": "Oitavo(a)",
+        "9": "Nono(a)",
+        "10": "Curso nao-seriado"
+      }
+    },
+    "p.cod_curso_frequentou_pessoa_memb": {
+      "descricao": "Curso mais elevado que a pessoa frequentou",
+      "mapeamento": {
+        "1": "Creche",
+        "2": "Pre-escola (exceto CA)",
+        "3": "Classe de Alfabetizacao - CA",
+        "4": "Ensino Fundamental 1Âª a 4Âª series, Elementar (Primario), Primeira fase do 1Âº grau",
+        "5": "Ensino Fundamental 5Âª a 8Âª series, Medio 1Âº ciclo (Ginasial), Segunda fase do 1Âº grau",
+        "6": "Ensino Fundamental (duracao 9 anos)",
+        "7": "Ensino Fundamental Especial",
+        "8": "Ensino Medio, 2Âº grau, Medio 2Âº ciclo (Cientifico, Classico, Tecnico, Normal)",
+        "9": "Ensino Medio Especial",
+        "10": "Ensino Fundamental EJA -series iniciais (Supletivo 1Âª a 4Âª)",
+        "11": "Ensino Fundamental EJA -series finais (Supletivo 5Âª a 8Âª)",
+        "12": "Ensino Medio EJA(Supletivo)",
+        "13": "Superior, Aperfeicoamento,Especializacao, Mestrado,Doutorado",
+        "14": "Alfabetizacao para Adultos(Mobral, etc.)",
+        "15": "Nenhum"
+      }
+    },
+    "p.cod_ano_serie_frequentou_memb": {
+      "descricao": "Ultimo ano e serie do curso que a pessoa frequentou",
+      "mapeamento": {
+        "1": "Primeiro(a)",
+        "2": "Segundo(a)",
+        "3": "Terceiro(a)",
+        "4": "Quarto(a)",
+        "5": "Quinto(a)",
+        "6": "Sexto(a)",
+        "7": "Setimo(a)",
+        "8": "Oitavo(a)",
+        "9": "Nono(a)",
+        "10": "Curso nao-seriado"
+      }
+    },
+    "p.cod_concluiu_frequentou_memb": {
+      "descricao": "A pessoa concluiu o curso?",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "p.grau_instrucao": {
+      "descricao": "Grau de instrucao",
+      "mapeamento": {
+        "1": "Sem instrucao",
+        "2": "Fundamental incompleto",
+        "3": "Fundamental completo",
+        "4": "Medio incompleto",
+        "5": "Medio completo",
+        "6": "Superior incompleto ou mais"
+      }
+    },
+    "p.cod_trabalhou_memb": {
+      "descricao": "Pessoa trabalhou na semana passada?",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "p.cod_afastado_trab_memb": {
+      "descricao": "Pessoa estava afastada na semana passada?",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "p.cod_agricultura_trab_memb": {
+      "descricao": "Atividade extrativista",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "p.cod_principal_trab_memb": {
+      "descricao": "Funcao principal",
+      "mapeamento": {
+        "1": "Trabalhador por conta propria (bico, autonomo)",
+        "2": "Trabalhador temporario em area rural",
+        "3": "Empregado sem carteira de trabalho assinada",
+        "4": "Empregado com carteira de trabalho assinada",
+        "5": "Trabalhador domestico sem carteira de trabalho assinada",
+        "6": "Trab. domestico com cart. de trab. assinada",
+        "7": "Trabalhador nao-remunerado",
+        "8": "Militar ou servidor publico",
+        "9": "Empregador",
+        "10": "Estagiario",
+        "11": "Aprendiz"
+      }
+    },
+    "p.fx_renda_individual_805": {
+      "descricao": "Faixa do valor de remuneracao do mes passado do trabalho principal.",
+      "mapeamento": {
+        "0": "Pessoa com renda zero no quesito",
+        "1": "Pessoa com renda maior do que zero e menor ou igual ao corte de extrema pobreza no quesito",
+        "2": "Pessoa com renda maior do que o corte de extrema pobreza e menor ou igual ao corte de pobreza no quesito",
+        "3": "Pessoa com renda maior do que o corte de pobreza e menor ou igual a meio salário mínimo no quesito",
+        "4": "Pessoa com renda maior do que meio salário mínimo e menor ou igual a um salário mínimo no quesito",
+        "5": "Pessoa com renda maior do que um salário mínimo e menor ou igual a dois salários mínimos no quesito",
+        "6": "Pessoa com renda maior do que dois salários mínimos e menor ou igual a três salários mínimos no quesito",
+        "7": "Pessoa com renda maior do que três salários mínimos no quesito"
+      }
+    },
+    "p.cod_trabalho_12_meses_memb": {
+      "descricao": "Trabalho remunerado nos ultimos 12 meses",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "p.qtd_meses_12_meses_memb": {
+      "descricao": "Quantidade de meses trabalhados nos ultimos 12 meses",
+      "mapeamento": {}
+    },
+    "p.fx_renda_individual_808": {
+      "descricao": "Faixa da remuneracao bruta de todos os trabalhos nos ultimos 12 meses.",
+      "mapeamento": {
+        "0": "Pessoa com renda zero no quesito",
+        "1": "Pessoa com renda maior do que zero e menor ou igual ao corte de extrema pobreza, a partir do cálculo do valor do quesito 8.08 dividido por 12 meses",
+        "2": "Pessoa com renda maior do que o corte de extrema pobreza e menor ou igual ao corte de pobreza, a partir do cálculo do valor do quesito 8.08 dividido por 12 meses",
+        "3": "Pessoa com renda maior do que o corte de pobreza e menor ou igual a meio salário mínimo, a partir do cálculo do valor do quesito 8.08 dividido por 12 meses",
+        "4": "Pessoa com renda maior do que meio salário mínimo e menor ou igual a um salário mínimo, a partir do cálculo do valor do quesito 8.08 dividido por 12 meses",
+        "5": "Pessoa com renda maior do que um salário mínimo e menor ou igual a dois salários mínimos, a partir do cálculo do valor do quesito 8.08 dividido por 12 meses",
+        "6": "Pessoa com renda maior do que dois salários mínimos e menor ou igual a três salários mínimos, a partir do cálculo do valor do quesito 8.08 dividido por 12 meses",
+        "7": "Pessoa com renda maior do que três salários mínimos, a partir do cálculo do valor do quesito 8.08 dividido por 12 meses"
+      }
+    },
+    "p.fx_renda_individual_809_1": {
+      "descricao": "Faixa do valor recebido de doacao.",
+      "mapeamento": {
+        "0": "Pessoa com renda zero no quesito",
+        "1": "Pessoa com renda maior do que zero e menor ou igual ao corte de extrema pobreza no quesito",
+        "2": "Pessoa com renda maior do que o corte de extrema pobreza e menor ou igual ao corte de pobreza no quesito",
+        "3": "Pessoa com renda maior do que o corte de pobreza e menor ou igual a meio salário mínimo no quesito",
+        "4": "Pessoa com renda maior do que meio salário mínimo e menor ou igual a um salário mínimo no quesito",
+        "5": "Pessoa com renda maior do que um salário mínimo e menor ou igual a dois salários mínimos no quesito",
+        "6": "Pessoa com renda maior do que dois salários mínimos e menor ou igual a três salários mínimos no quesito",
+        "7": "Pessoa com renda maior do que três salários mínimos no quesito"
+      }
+    },
+    "p.fx_renda_individual_809_2": {
+      "descricao": "Faixa do valor recebido de aposentadoria.",
+      "mapeamento": {
+        "0": "Pessoa com renda zero no quesito",
+        "1": "Pessoa com renda maior do que zero e menor ou igual ao corte de extrema pobreza no quesito",
+        "2": "Pessoa com renda maior do que o corte de extrema pobreza e menor ou igual ao corte de pobreza no quesito",
+        "3": "Pessoa com renda maior do que o corte de pobreza e menor ou igual a meio salário mínimo no quesito",
+        "4": "Pessoa com renda maior do que meio salário mínimo e menor ou igual a um salário mínimo no quesito",
+        "5": "Pessoa com renda maior do que um salário mínimo e menor ou igual a dois salários mínimos no quesito",
+        "6": "Pessoa com renda maior do que dois salários mínimos e menor ou igual a três salários mínimos no quesito",
+        "7": "Pessoa com renda maior do que três salários mínimos no quesito"
+      }
+    },
+    "p.fx_renda_individual_809_3": {
+      "descricao": "Faixa do valor recebido de seguro desemprego.",
+      "mapeamento": {
+        "0": "Pessoa com renda zero no quesito",
+        "1": "Pessoa com renda maior do que zero e menor ou igual ao corte de extrema pobreza no quesito",
+        "2": "Pessoa com renda maior do que o corte de extrema pobreza e menor ou igual ao corte de pobreza no quesito",
+        "3": "Pessoa com renda maior do que o corte de pobreza e menor ou igual a meio salário mínimo no quesito",
+        "4": "Pessoa com renda maior do que meio salário mínimo e menor ou igual a um salário mínimo no quesito",
+        "5": "Pessoa com renda maior do que um salário mínimo e menor ou igual a dois salários mínimos no quesito",
+        "6": "Pessoa com renda maior do que dois salários mínimos e menor ou igual a três salários mínimos no quesito",
+        "7": "Pessoa com renda maior do que três salários mínimos no quesito"
+      }
+    },
+    "p.fx_renda_individual_809_4": {
+      "descricao": "Faixa do valor recebido de pensao alimenticia.",
+      "mapeamento": {
+        "0": "Pessoa com renda zero no quesito",
+        "1": "Pessoa com renda maior do que zero e menor ou igual ao corte de extrema pobreza no quesito",
+        "2": "Pessoa com renda maior do que o corte de extrema pobreza e menor ou igual ao corte de pobreza no quesito",
+        "3": "Pessoa com renda maior do que o corte de pobreza e menor ou igual a meio salário mínimo no quesito",
+        "4": "Pessoa com renda maior do que meio salário mínimo e menor ou igual a um salário mínimo no quesito",
+        "5": "Pessoa com renda maior do que um salário mínimo e menor ou igual a dois salários mínimos no quesito",
+        "6": "Pessoa com renda maior do que dois salários mínimos e menor ou igual a três salários mínimos no quesito",
+        "7": "Pessoa com renda maior do que três salários mínimos no quesito"
+      }
+    },
+    "p.fx_renda_individual_809_5": {
+      "descricao": "Faixa do valor recebido de outras fontes.",
+      "mapeamento": {
+        "0": "Pessoa com renda zero no quesito",
+        "1": "Pessoa com renda maior do que zero e menor ou igual ao corte de extrema pobreza no quesito",
+        "2": "Pessoa com renda maior do que o corte de extrema pobreza e menor ou igual ao corte de pobreza no quesito",
+        "3": "Pessoa com renda maior do que o corte de pobreza e menor ou igual a meio salário mínimo no quesito",
+        "4": "Pessoa com renda maior do que meio salário mínimo e menor ou igual a um salário mínimo no quesito",
+        "5": "Pessoa com renda maior do que um salário mínimo e menor ou igual a dois salários mínimos no quesito",
+        "6": "Pessoa com renda maior do que dois salários mínimos e menor ou igual a três salários mínimos no quesito",
+        "7": "Pessoa com renda maior do que três salários mínimos no quesito"
+      }
+    },
+    "p.marc_sit_rua": {
+      "descricao": "Situacao de Rua",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_dormir_rua_memb": {
+      "descricao": "Dorme na rua",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.qtd_dormir_freq_rua_memb": {
+      "descricao": "Quantidade de vezes por semana que dorme na rua",
+      "mapeamento": {}
+    },
+    "p.ind_dormir_albergue_memb": {
+      "descricao": "Dorme em albergue",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.qtd_dormir_freq_albergue_memb": {
+      "descricao": "Quantidade de vezes por semana que dorme em albergue",
+      "mapeamento": {}
+    },
+    "p.ind_dormir_dom_part_memb": {
+      "descricao": "Dorme em domicilio particular",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.qtd_dormir_freq_dom_part_memb": {
+      "descricao": "Quantidade de vezes por semana que dorme em domicilio particular",
+      "mapeamento": {}
+    },
+    "p.ind_outro_memb": {
+      "descricao": "Dorme de outra forma",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.qtd_freq_outro_memb": {
+      "descricao": "Quantidade de vezes por semana que dorme de outra forma",
+      "mapeamento": {}
+    },
+    "p.cod_tempo_rua_memb": {
+      "descricao": "Tempo em que vive na rua",
+      "mapeamento": {
+        "1": "Ate seis meses",
+        "2": "Entre seis meses e um ano",
+        "3": "Entre um e dois anos",
+        "4": "Entre dois e cinco anos",
+        "5": "Entre cinco e dez anos",
+        "6": "Mais de dez anos"
+      }
+    },
+    "p.ind_motivo_perda_memb": {
+      "descricao": "Motivo da condicao de rua por perda de moradia",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_motivo_ameaca_memb": {
+      "descricao": "Motivo da condicao de rua por ameaca",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_motivo_probs_fam_memb": {
+      "descricao": "Motivo da condicao de rua por problemas familiares",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_motivo_alcool_memb": {
+      "descricao": "Motivo da condicao de rua por alcoolismo",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_motivo_desemprego_memb": {
+      "descricao": "Motivo da condicao de rua por desemprego",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_motivo_trabalho_memb": {
+      "descricao": "Motivo da condicao de rua por trabalho",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_motivo_saude_memb": {
+      "descricao": "Motivo da condicao de rua por tratamento de saude",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_motivo_pref_memb": {
+      "descricao": "Motivo da condicao de rua por preferencia",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_motivo_outro_memb": {
+      "descricao": "Motivo da condicao de rua por outro motivo",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_motivo_nao_sabe_memb": {
+      "descricao": "Nao sabe/nao lembra o motivo da condicao de rua",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_motivo_nao_resp_memb": {
+      "descricao": "Nao respondeu o motivo da condicao de rua",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.cod_tempo_cidade_memb": {
+      "descricao": "Tempo em que mora na cidade",
+      "mapeamento": {
+        "1": "Ate seis meses",
+        "2": "Entre seis meses e um ano",
+        "3": "Entre um e dois anos",
+        "4": "Entre dois e cinco anos",
+        "5": "Entre cinco e dez anos",
+        "6": "Mais de dez anos"
+      }
+    },
+    "p.cod_vive_fam_rua_memb": {
+      "descricao": "Vive com sua familia na rua",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "p.cod_contato_parente_memb": {
+      "descricao": "Tem contato com parente fora da condicao de rua",
+      "mapeamento": {
+        "1": "Todo dia",
+        "2": "Toda semana",
+        "3": "Todo mes",
+        "4": "Todo ano",
+        "5": "Quase nunca",
+        "6": "Nunca"
+      }
+    },
+    "p.ind_ativ_com_escola_memb": {
+      "descricao": "Atividade comunitaria em escola",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_ativ_com_coop_memb": {
+      "descricao": "Atividade comunitaria em cooperativa",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_ativ_com_mov_soc_memb": {
+      "descricao": "Atividade comunitaria em movimento social",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_ativ_com_nao_sabe_memb": {
+      "descricao": "Nao sabe se frequentou atividade comunitaria",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_ativ_com_nao_resp_memb": {
+      "descricao": "Nao respondeu se frequentou atividade comunitaria",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_atend_cras_memb": {
+      "descricao": "Atendido por cras",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_atend_creas_memb": {
+      "descricao": "Atendido por creas",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_atend_centro_ref_rua_memb": {
+      "descricao": "Atendido por centro ref pop rua",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_atend_inst_gov_memb": {
+      "descricao": "Atendido por instituicao governamental",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_atend_inst_nao_gov_memb": {
+      "descricao": "Atendido por instituicao nao-governamental",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_atend_hospital_geral_memb": {
+      "descricao": "Atendido por hospital/clinica geral",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.cod_cart_assinada_memb": {
+      "descricao": "Teve emprego com carteira assinada?",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao",
+        "3": "Nao Sabe"
+      }
+    },
+    "p.ind_dinh_const_memb": {
+      "descricao": "Ganha dinheiro com construcao civil",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_dinh_flanelhinha_memb": {
+      "descricao": "Ganha dinheiro como guardador de carro",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_dinh_carregador_memb": {
+      "descricao": "Ganha dinheiro como carregador",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_dinh_catador_memb": {
+      "descricao": "Ganha dinheiro como catador",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_dinh_servs_gerais_memb": {
+      "descricao": "Ganha dinheiro com servicos gerais",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_dinh_pede_memb": {
+      "descricao": "Ganha dinheiro como pedinte",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_dinh_vendas_memb": {
+      "descricao": "Ganha dinheiro com vendas",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_dinh_outro_memb": {
+      "descricao": "Ganha dinheiro de outra forma",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_dinh_nao_resp_memb": {
+      "descricao": "Nao respondeu como ganha dinheiro",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ind_atend_nenhum_memb": {
+      "descricao": "Nao foi atendido por nenhum local",
+      "mapeamento": {
+        "0": "Nao",
+        "1": "Sim"
+      }
+    },
+    "p.ref_cad": {
+      "descricao": "Referencia Cadastro Unico",
+      "mapeamento": {}
+    },
+    "p.ref_pbf": {
+      "descricao": "Data de referencia Programa Bolsa Familia",
+      "mapeamento": {}
+    },
+    "p.ind_identidade_genero": {
+      "descricao": "Pessoa deseja informar o gênero?",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "p.ind_transgenero": {
+      "descricao": "É pessoa trans ou travesti?",
+      "mapeamento": {
+        "1": "Sim, a pessoa é trans",
+        "2": "Sim, a pessoa é travesti",
+        "3": "Não"
+      }
+    },
+    "p.ind_tipo_identidade_genero": {
+      "descricao": "Gênero/identidade de gênero da pessoa",
+      "mapeamento": {
+        "1": "Feminina",
+        "2": "Masculina",
+        "3": "Não binário/a"
+      }
+    },
+    "d.ind_risco_scl_vlco_drts": {
+      "descricao": "Família identificada em situação de risco social associado à violação de direitos",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "d.ind_risco_scl_inseg_alim": {
+      "descricao": "Família em risco para insegurança alimentar",
+      "mapeamento": {
+        "1": "Sim",
+        "2": "Nao"
+      }
+    },
+    "d.marc_gas": {
+      "descricao": "Família beneficiária do Auxílio Gás",
+      "mapeamento": {
+        "0": "Não",
+        "1": "Sim"
+      }
+    },
+    "p.marc_gas": {
+      "descricao": "Pessoa beneficiária do Auxílio Gás",
+      "mapeamento": {
+        "0": "Não",
+        "1": "Sim"
+      }
+    },
+    "p.ref_gas": {
+      "descricao": "Mês/ano de referência da folha do Auxílio Gás",
+      "mapeamento": {}
+    },
+    "d.marc_bpc": {
+      "descricao": "Família beneficiária do Benefício de Prestação Continuada (BPC)",
+      "mapeamento": {
+        "0": "Não",
+        "1": "Sim"
+      }
+    },
+    "p.marc_bpc": {
+      "descricao": "Pessoa beneficiária do Benefício de Prestação Continuada (BPC)",
+      "mapeamento": {
+        "0": "Não",
+        "1": "Sim"
+      }
+    },
+    "p.ref_bpc": {
+      "descricao": "Mês/ano de referência da folha do BPC",
+      "mapeamento": {}
+    }
+  }
+}
