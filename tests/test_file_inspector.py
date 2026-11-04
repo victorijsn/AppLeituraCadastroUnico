@@ -1,7 +1,14 @@
+import os
 import unittest
 from src.core.file_inspector import FileInspector, parse_reference_date, get_municipio_nome
 
 class TestFileInspector(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.zip_path = "base/cecad/tab_cad_07082026_32_20260911.zip"
+        if not os.path.exists(cls.zip_path):
+            cls.zip_path = "base/tab_cad_07082026_32_20260911.zip"
+
     def test_parse_reference_date(self):
         info = parse_reference_date("tab_cad_07082026_32_20260911.zip")
         self.assertEqual(info["base_mes_ano"], "08/2026")
@@ -18,7 +25,7 @@ class TestFileInspector(unittest.TestCase):
         self.assertIn("Presidente Kennedy", nome_pk)
 
     def test_inspect_zip_header(self):
-        inspector = FileInspector("base/tab_cad_07082026_32_20260911.zip")
+        inspector = FileInspector(self.zip_path)
         self.assertTrue(inspector.is_zip)
         self.assertEqual(inspector.delimiter, ";")
         self.assertGreater(len(inspector.columns), 150)
@@ -26,7 +33,7 @@ class TestFileInspector(unittest.TestCase):
         self.assertEqual(inspector.ibge_col_index, 0)
 
     def test_scan_municipalities_partial(self):
-        inspector = FileInspector("base/tab_cad_07082026_32_20260911.zip")
+        inspector = FileInspector(self.zip_path)
         # Scan first 5000 lines for fast unit test
         is_single, mun_list = inspector.scan_municipalities(max_lines=5000)
         self.assertFalse(is_single)

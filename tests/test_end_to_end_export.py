@@ -10,7 +10,9 @@ class TestEndToEndExport(unittest.TestCase):
     def setUp(self):
         self.dict_parser = DictionaryParser(json_path="src/assets/dicionario_padrao.json")
         self.data_engine = DataEngine(self.dict_parser)
-        self.zip_path = "base/tab_cad_07082026_32_20260911.zip"
+        self.zip_path = "base/cecad/tab_cad_07082026_32_20260911.zip"
+        if not os.path.exists(self.zip_path):
+            self.zip_path = "base/tab_cad_07082026_32_20260911.zip"
         self.out_xlsx = "tests/e2e_kennedy.xlsx"
         self.out_csv = "tests/e2e_kennedy.csv"
 

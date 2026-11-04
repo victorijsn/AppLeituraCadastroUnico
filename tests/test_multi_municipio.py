@@ -1,3 +1,4 @@
+import os
 import unittest
 from src.core.dictionary_parser import DictionaryParser
 from src.core.data_engine import DataEngine
@@ -8,7 +9,9 @@ class TestMultiMunicipioAndMetrics(unittest.TestCase):
     def setUpClass(cls):
         cls.parser = DictionaryParser(json_path="src/assets/dicionario_padrao.json")
         cls.engine = DataEngine(cls.parser)
-        cls.zip_path = "base/tab_cad_07082026_32_20260911.zip"
+        cls.zip_path = "base/cecad/tab_cad_07082026_32_20260911.zip"
+        if not os.path.exists(cls.zip_path):
+            cls.zip_path = "base/tab_cad_07082026_32_20260911.zip"
 
     def test_multi_municipio_filtering(self):
         # 3204302 = Presidente Kennedy, 3200102 = Afonso Cláudio (ou outro do ES)
