@@ -29,7 +29,8 @@ class DataExporter:
         df: pd.DataFrame,
         output_path: str,
         sheet_name: str = "Cadastro Unico",
-        progress_callback: Optional[Callable[[float, str], None]] = None
+        progress_callback: Optional[Callable[[float, str], None]] = None,
+        max_rows_per_sheet: int = 1_000_000
     ) -> str:
         """
         Exporta DataFrame para .xlsx profissional com xlsxwriter:
@@ -37,6 +38,7 @@ class DataExporter:
         - Cabeçalho estilizado (azul escuro, texto branco, negrito)
         - Linha de cabeçalho congelada (Freeze Panes)
         - Filtro automático ativado
+        - Divisão automática em abas se total_rows > max_rows_per_sheet
         """
         if progress_callback:
             progress_callback(0.1, "Iniciando criação da planilha Excel...")
@@ -44,7 +46,6 @@ class DataExporter:
         os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
 
         workbook = xlsxwriter.Workbook(output_path, {"constant_memory": True})
-        worksheet = workbook.add_worksheet(sheet_name[:31])
 
         # Formatos visuais
         header_format = workbook.add_format({
@@ -74,49 +75,67 @@ class DataExporter:
 
         headers = list(df.columns)
         num_cols = len(headers)
-        num_rows = len(df)
+        total_rows = len(df)
 
         col_text_flags = [is_text_column(h) for h in headers]
         col_widths = [min(max(len(str(h)) + 3, 12), 45) for h in headers]
 
-        # Escreve cabeçalho
-        worksheet.set_row(0, 26)
-        for col_idx, header in enumerate(headers):
-            worksheet.write_string(0, col_idx, str(header), header_format)
+        # Limite máximo seguro por aba no Excel (limite absoluto do xlsxwriter é 1.048.576)
+        MAX_ROWS_PER_SHEET = max_rows_per_sheet
+
+        def init_worksheet(name: str):
+            ws = workbook.add_worksheet(name[:31])
+            ws.set_row(0, 26)
+            for c_idx, h in enumerate(headers):
+                ws.write_string(0, c_idx, str(h), header_format)
+            ws.freeze_panes(1, 0)
+            for c_idx, w in enumerate(col_widths):
+                ws.set_column(c_idx, c_idx, w)
+            return ws
+
+        sheet_index = 1
+        current_sheet_name = f"{sheet_name[:20]} - Parte {sheet_index}" if total_rows > MAX_ROWS_PER_SHEET else sheet_name[:31]
+        worksheet = init_worksheet(current_sheet_name)
+        rows_in_current_sheet = 0
 
         # Escreve linhas
-        total_rows = len(df)
         for row_idx, row in enumerate(df.itertuples(index=False)):
-            worksheet.set_row(row_idx + 1, 20)
+            if rows_in_current_sheet >= MAX_ROWS_PER_SHEET:
+                # Finaliza aba anterior com autofiltro
+                if rows_in_current_sheet > 0 and num_cols > 0:
+                    worksheet.autofilter(0, 0, rows_in_current_sheet, num_cols - 1)
+
+                sheet_index += 1
+                current_sheet_name = f"{sheet_name[:20]} - Parte {sheet_index}"
+                worksheet = init_worksheet(current_sheet_name)
+                rows_in_current_sheet = 0
+
+            target_row = rows_in_current_sheet + 1
+            worksheet.set_row(target_row, 20)
+
             for col_idx, val in enumerate(row):
                 if pd.isna(val) or val is None:
-                    worksheet.write_blank(row_idx + 1, col_idx, None, cell_format)
+                    worksheet.write_blank(target_row, col_idx, None, cell_format)
                     continue
 
                 if col_text_flags[col_idx]:
                     val_str = str(val).strip()
-                    worksheet.write_string(row_idx + 1, col_idx, val_str, text_format)
+                    worksheet.write_string(target_row, col_idx, val_str, text_format)
                 else:
-                    # Se for numérico float ou int
                     if isinstance(val, (int, float)):
-                        worksheet.write_number(row_idx + 1, col_idx, val, cell_format)
+                        worksheet.write_number(target_row, col_idx, val, cell_format)
                     else:
-                        worksheet.write(row_idx + 1, col_idx, str(val), cell_format)
+                        worksheet.write(target_row, col_idx, str(val), cell_format)
+
+            rows_in_current_sheet += 1
 
             if progress_callback and (row_idx + 1) % 10000 == 0:
                 pct = 0.1 + (row_idx / total_rows) * 0.85
-                progress_callback(pct, f"Gravando linha {row_idx + 1:,} no Excel...".replace(",", "."))
+                progress_callback(pct, f"Gravando linha {row_idx + 1:,} no Excel (Aba {sheet_index})...".replace(",", "."))
 
-        # Ativa congelamento da primeira linha
-        worksheet.freeze_panes(1, 0)
-
-        # Ativa autofiltro
-        if num_rows > 0 and num_cols > 0:
-            worksheet.autofilter(0, 0, num_rows, num_cols - 1)
-
-        # Aplica larguras das colunas
-        for col_idx, width in enumerate(col_widths):
-            worksheet.set_column(col_idx, col_idx, width)
+        # Ativa autofiltro na última aba
+        if rows_in_current_sheet > 0 and num_cols > 0:
+            worksheet.autofilter(0, 0, rows_in_current_sheet, num_cols - 1)
 
         workbook.close()
 

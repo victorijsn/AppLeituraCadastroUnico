@@ -7,7 +7,7 @@ import os
 import io
 import zipfile
 import re
-from typing import Dict, List, Optional, Tuple, Any, Callable
+from typing import Dict, List, Optional, Tuple, Any, Callable, Set
 import pandas as pd
 
 from src.core.dictionary_parser import DictionaryParser
@@ -40,6 +40,7 @@ class DataEngine:
         self,
         file_path: str,
         municipio_ibge: Optional[str] = None,
+        municipios_ibge: Optional[List[str]] = None,
         granularidade: str = "pessoa",  # "pessoa" ou "familia"
         perfil_colunas: str = "completo",  # "completo", "geral", "bolsa_familia", "habitacao", "pessoas_trabalho", ou lista manual
         colunas_customizadas: Optional[List[str]] = None,
@@ -101,7 +102,15 @@ class DataEngine:
             idx_cras = norm_indices.get("nom_unidade_territorial_fam")
 
             delim_b = inspector.delimiter.encode("ascii")
-            ibge_b = municipio_ibge.strip().encode("ascii") if municipio_ibge else None
+
+            # Normaliza filtro de município(s)
+            target_ibges: Optional[Set[str]] = None
+            if municipios_ibge:
+                target_ibges = {str(m).strip() for m in municipios_ibge if str(m).strip()}
+            elif municipio_ibge and str(municipio_ibge).strip():
+                target_ibges = {str(municipio_ibge).strip()}
+
+            target_ibges_bytes = {m.encode("ascii") for m in target_ibges} if target_ibges else None
             bairro_lower = filtro_bairro.strip().lower() if filtro_bairro else None
 
             # Pré-carrega mapas categóricos para as colunas selecionadas
@@ -114,6 +123,7 @@ class DataEngine:
 
             processed_rows = []
             total_lines = 0
+            filtered_count = 0
             distinct_families = set()
             count_pbf_sim = 0
             count_desatualizados = 0
@@ -127,9 +137,12 @@ class DataEngine:
                 total_lines += 1
 
                 # Filtro rápido por município direto no início da linha (se aplicável)
-                if ibge_b and idx_ibge == 0:
-                    if not line.startswith(ibge_b):
-                        continue
+                if target_ibges_bytes and idx_ibge == 0:
+                    semi_pos = line.find(delim_b)
+                    if semi_pos != -1:
+                        line_ibge_b = line[:semi_pos].strip()
+                        if line_ibge_b not in target_ibges_bytes:
+                            continue
 
                 # Notificação periódica de progresso
                 if progress_callback and total_lines % 250000 == 0:
@@ -140,8 +153,8 @@ class DataEngine:
                 fields = line_str.split(inspector.delimiter)
 
                 # Valida IBGE caso não seja o primeiro campo
-                if ibge_b and idx_ibge is not None and idx_ibge < len(fields):
-                    if fields[idx_ibge].strip() != municipio_ibge.strip():
+                if target_ibges and idx_ibge is not None and idx_ibge < len(fields):
+                    if fields[idx_ibge].strip() not in target_ibges:
                         continue
 
                 # Filtro Granularidade: Família (apenas Responsável Familiar = 1)
@@ -193,7 +206,9 @@ class DataEngine:
                     if not match_loc:
                         continue
 
-                # Coleta estatísticas
+                # Registro passou por todos os filtros: contabiliza nas métricas do universo filtrado
+                filtered_count += 1
+
                 if idx_cod_fam is not None and idx_cod_fam < len(fields):
                     distinct_families.add(fields[idx_cod_fam].strip())
 
@@ -211,33 +226,31 @@ class DataEngine:
                     except Exception:
                         pass
 
-                # Extrai apenas as colunas selecionadas com tradução e LGPD
-                row_vals = []
-                for idx in selected_indices:
-                    val = fields[idx].strip() if idx < len(fields) else ""
-                    col_name = all_columns[idx]
+                # Extrai apenas as colunas para o DataFrame de retorno (respeitando limite_linhas se houver)
+                if limite_linhas is None or len(processed_rows) < limite_linhas:
+                    row_vals = []
+                    for idx in selected_indices:
+                        val = fields[idx].strip() if idx < len(fields) else ""
+                        col_name = all_columns[idx]
 
-                    # Tradução Categórica
-                    if idx in translation_maps:
-                        mp = translation_maps[idx]
-                        if val in mp:
-                            val = mp[val]
-                        elif val.isdigit() and str(int(val)) in mp:
-                            val = mp[str(int(val))]
+                        # Tradução Categórica
+                        if idx in translation_maps:
+                            mp = translation_maps[idx]
+                            if val in mp:
+                                val = mp[val]
+                            elif val.isdigit() and str(int(val)) in mp:
+                                val = mp[str(int(val))]
 
-                    # LGPD Mascaramento
-                    if modo_lgpd:
-                        val = apply_lgpd_mask(col_name, val)
+                        # LGPD Mascaramento
+                        if modo_lgpd:
+                            val = apply_lgpd_mask(col_name, val)
 
-                    row_vals.append(val)
+                        row_vals.append(val)
 
-                processed_rows.append(row_vals)
-
-                if limite_linhas and len(processed_rows) >= limite_linhas:
-                    break
+                    processed_rows.append(row_vals)
 
             if progress_callback:
-                progress_callback(0.90, "Formatando tabela final e calculando resumo...")
+                progress_callback(0.90, "Formatando tabela final e consolidando métricas...")
 
             # Define nomes das colunas de saída
             final_col_names = []
@@ -262,7 +275,7 @@ class DataEngine:
 
             df = pd.DataFrame(processed_rows, columns=final_col_names)
 
-            total_pessoas = len(processed_rows)
+            total_pessoas = filtered_count
             total_familias = len(distinct_families) if distinct_families else total_pessoas
             perc_pbf = (count_pbf_sim / total_pessoas * 100.0) if total_pessoas > 0 else 0.0
             perc_desat = (count_desatualizados / total_pessoas * 100.0) if total_pessoas > 0 else 0.0
@@ -280,7 +293,7 @@ class DataEngine:
             }
 
             if progress_callback:
-                progress_callback(1.0, f"Concluído! {total_pessoas:,} registros preparados.")
+                progress_callback(1.0, f"Concluído! {total_pessoas:,} registros filtrados.")
 
             return df, metrics
 
