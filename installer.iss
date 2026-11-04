@@ -2,7 +2,7 @@
 ; Permite instalação em modo Usuário (PrivilegesRequired=lowest) sem exigir senha de Administrador (UAC).
 
 #define MyAppName "AppLeituraCadastroUnico"
-#define MyAppVersion "1.1.0"
+#define MyAppVersion "1.2.0"
 #define MyAppPublisher "Gestão Cadastro Único"
 #define MyAppExeName "AppLeituraCadastroUnico.exe"
 
@@ -22,7 +22,7 @@ PrivilegesRequiredOverridesAllowed=dialog
 
 ; Configurações de saída do instalador
 OutputDir=dist_installer
-OutputBaseFilename=Instalador_AppLeituraCadUnico_v1.1
+OutputBaseFilename=Instalador_AppLeituraCadUnico_v1.2
 Compression=lzma2/max
 SolidCompression=yes
 WizardStyle=modern

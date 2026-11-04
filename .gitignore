@@ -7,10 +7,18 @@ dist_installer/
 *.spec
 tests/e2e_*
 tests/test_out.*
+tests/test_temp_*
 
-# Bases de dados do CadÚnico (sigilo LGPD e limite de 100MB do GitHub)
+# Bases de dados do CadÚnico e Folha Bolsa Família (sigilo LGPD e limite de 100MB do GitHub)
+base/**/*.zip
+base/**/*.csv
+base/**/*.CSV
+base/**/*.pdf
+base/**/*.PDF
 base/*.zip
 base/*.csv
 *.csv
 *.xlsx
+*.zip
 !base/dicionariocecad_marc_pbf.xlsx
+!base/cecad/dicionariocecad_marc_pbf.xlsx
