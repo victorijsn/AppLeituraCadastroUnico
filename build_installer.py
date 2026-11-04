@@ -63,11 +63,11 @@ def build_pipeline():
 
     if iscc_path:
         print(f"-> Inno Setup encontrado em: {iscc_path}")
-        print("-> Compilando Instalador_AppLeituraCadUnico_v1.0.exe...")
+        print("-> Compilando Instalador_AppLeituraCadUnico_v1.1.exe...")
         os.makedirs("dist_installer", exist_ok=True)
         res_inno = subprocess.run([iscc_path, "installer.iss"])
         if res_inno.returncode == 0:
-            installer_path = os.path.join("dist_installer", "Instalador_AppLeituraCadUnico_v1.0.exe")
+            installer_path = os.path.join("dist_installer", "Instalador_AppLeituraCadUnico_v1.1.exe")
             inst_size_mb = os.path.getsize(installer_path) / (1024 * 1024)
             print(f"\n[SUCESSO] Instalador gerado com sucesso!")
             print(f"-> Local: {installer_path} ({inst_size_mb:.1f} MB)")
@@ -77,7 +77,7 @@ def build_pipeline():
             print("[AVISO] Inno Setup retornou erro na compilação do instalador.")
     else:
         print("\n[INFO] O Inno Setup Compiler (ISCC.exe) não foi encontrado no seu computador.")
-        print("Para gerar o arquivo 'Instalador_AppLeituraCadUnico_v1.0.exe':")
+        print("Para gerar o arquivo 'Instalador_AppLeituraCadUnico_v1.1.exe':")
         print("  1. Instale o Inno Setup gratuitamente pelo comando no terminal:")
         print("     winget install JRSoftware.InnoSetup")
         print("     (ou baixe em: https://jrsoftware.org/isdl.php)")
